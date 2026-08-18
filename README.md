@@ -71,10 +71,19 @@ Resize to roughly 800px wide before committing so the page stays light.
 
 ## Publishing
 
-GitHub Pages, from the repository root. The canonical URLs, `sitemap.xml` and
-`robots.txt` all assume `https://timdg01.github.io/`. If you publish from this
-project repo instead of a `TimDG01.github.io` user repo, the real base URL is
-`https://timdg01.github.io/tesla-referral/` and those URLs need updating.
+GitHub Pages, served from this repository: Settings -> Pages -> Source
+"Deploy from a branch", branch `main`, folder `/ (root)`. The site then lives at
+`https://timdg01.github.io/tesla-referral/`, which is what the canonical tags,
+the hreflang cluster, `sitemap.xml` and `robots.txt` all point at. Every link
+inside the pages is relative, so moving the site to another base URL only means
+updating those absolute URLs.
+
+Note that on a project page, `robots.txt` is inert: crawlers only read it at the
+host root (`https://timdg01.github.io/robots.txt`), which this repo does not
+control. It is kept here because it becomes valid the moment the site moves to a
+root domain, and because nothing on the site needs blocking anyway. Submit
+`sitemap.xml` directly in Search Console instead of relying on the `Sitemap:`
+line in it.
 
 After publishing, submit the sitemap in Google Search Console. Metadata alone does
 not get a page ranked for a competitive term like "Tesla referral code" — indexing
