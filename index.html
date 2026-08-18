@@ -1,0 +1,350 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+<title>Tesla Referral Code tim588947 — Get Your Tesla Order Bonus</title>
+<meta name="description" content="Use Tesla referral code tim588947 when you order a new Tesla. Copy the link, apply it before you confirm your order, and claim the current referral bonus. From a Tesla owner in Belgium.">
+<link rel="canonical" href="https://timdg01.github.io/">
+<meta name="theme-color" content="#0d0f12">
+<meta name="robots" content="index, follow">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Tesla Referral — tim588947">
+<meta property="og:title" content="Tesla Referral Code tim588947 — Get Your Tesla Order Bonus">
+<meta property="og:description" content="Use Tesla referral code tim588947 when you order a new Tesla. Copy the link, apply it before you confirm your order, and claim the current referral bonus.">
+<meta property="og:url" content="https://timdg01.github.io/">
+<meta property="og:locale" content="en_GB">
+
+<!-- Twitter -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Tesla Referral Code tim588947 — Get Your Tesla Order Bonus">
+<meta name="twitter:description" content="Use Tesla referral code tim588947 when you order a new Tesla. Apply it before you confirm your order to claim the current referral bonus.">
+
+<!-- Inline SVG favicon: no external request -->
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='7' fill='%230d0f12'/%3E%3Cpath d='M6 10h20l-2.6 3.2h-5.1V24h-4.6V13.2H8.6z' fill='%23e82127'/%3E%3C/svg%3E">
+
+<link rel="stylesheet" href="style.css">
+
+<script>
+  /* ---------------------------------------------------------------
+     Change these two values and the whole page updates.
+     --------------------------------------------------------------- */
+  const REFERRAL_CODE = "tim588947";
+  const REFERRAL_URL  = "https://ts.la/tim588947";
+  /* --------------------------------------------------------------- */
+
+  document.addEventListener("DOMContentLoaded", function () {
+    document.querySelectorAll("[data-ref-code]").forEach(function (el) {
+      el.textContent = REFERRAL_CODE;
+    });
+    document.querySelectorAll("[data-ref-url]").forEach(function (el) {
+      el.textContent = REFERRAL_URL;
+    });
+    document.querySelectorAll("[data-ref-link]").forEach(function (el) {
+      el.href = REFERRAL_URL;
+    });
+
+    var button = document.querySelector("[data-copy]");
+    var status = document.getElementById("copy-status");
+    if (!button) return;
+
+    function flash(message) {
+      button.classList.add("is-copied");
+      if (status) status.textContent = message;
+      window.setTimeout(function () {
+        button.classList.remove("is-copied");
+        if (status) status.textContent = "";
+      }, 2400);
+    }
+
+    function selectLinkText() {
+      var node = document.querySelector(".code-value--link");
+      if (!node || !window.getSelection) return;
+      var range = document.createRange();
+      range.selectNodeContents(node);
+      var selection = window.getSelection();
+      selection.removeAllRanges();
+      selection.addRange(range);
+    }
+
+    function fallbackCopy(text) {
+      var field = document.createElement("textarea");
+      field.value = text;
+      field.setAttribute("readonly", "");
+      field.style.position = "fixed";
+      field.style.opacity = "0";
+      document.body.appendChild(field);
+      field.select();
+      var ok = false;
+      try { ok = document.execCommand("copy"); } catch (e) { ok = false; }
+      document.body.removeChild(field);
+      return ok;
+    }
+
+    function copyWithFallback(value) {
+      if (fallbackCopy(value)) {
+        flash("Copied " + value + ".");
+      } else {
+        selectLinkText();
+        flash("Copy failed — the link is selected, press Ctrl/Cmd + C.");
+      }
+    }
+
+    button.addEventListener("click", function () {
+      var value = button.dataset.copy === "code" ? REFERRAL_CODE : REFERRAL_URL;
+      if (navigator.clipboard && window.isSecureContext) {
+        navigator.clipboard.writeText(value).then(
+          function () { flash("Copied " + value + " to your clipboard."); },
+          function () {
+            copyWithFallback(value);
+          }
+        );
+      } else {
+        copyWithFallback(value);
+      }
+    });
+  });
+</script>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What does the Tesla referral code give me as a buyer?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Tesla sets the referral reward per country and changes it regularly. Depending on the running campaign it can be a discount on the purchase price, free Supercharging kilometres, or credits you can spend in the Tesla app. Check Tesla's official referral page for the amount that applies in Belgium on the day you order — this site cannot promise a specific figure."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How do I apply the referral code to my Tesla order?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Open the referral link before you configure your car, or paste the code into the referral field on the order page. The code has to be in place before you confirm and pay the order fee. Verify that the referral shows up in your order summary or in the Tesla app under your order details."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I add a referral code after I have already ordered?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. Tesla only counts a referral that was attached at the moment the order was placed. Once the order is confirmed the referral field is locked, and support cannot add a code afterwards. If you have not ordered yet, use the link first."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does using a referral code cost me anything?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "No. The buyer pays exactly the same price for the car. The referral program is Tesla's own marketing scheme: the buyer receives the current bonus and the referrer receives credits from Tesla. There is no extra fee and no middleman."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does the referral code work for used and demo Teslas?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Usually not. Referrals normally apply to new vehicle orders only, and Tesla can exclude used inventory, demo cars, business leases and certain promotions. Tesla's referral terms page lists the current exclusions for your country."
+      }
+    }
+  ]
+}
+</script>
+</head>
+
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<main id="main">
+
+  <section class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Tesla referral · Belgium</p>
+      <h1>Order a Tesla with my referral code and claim the current bonus</h1>
+      <p class="lede">
+        Tesla gives new buyers a referral bonus when someone refers them. Use my link or code
+        before you confirm your order — it costs you nothing and takes about ten seconds.
+      </p>
+
+      <div class="card card--code">
+        <div class="code-row">
+          <span class="code-label">Referral code</span>
+          <span class="code-value" data-ref-code>tim588947</span>
+        </div>
+        <div class="code-row">
+          <span class="code-label">Referral link</span>
+          <a class="code-value code-value--link" data-ref-link data-ref-url href="https://ts.la/tim588947" rel="nofollow noopener">https://ts.la/tim588947</a>
+        </div>
+
+        <div class="actions">
+          <a class="btn btn--primary" data-ref-link href="https://ts.la/tim588947" rel="nofollow noopener">Open my referral link</a>
+          <button class="btn btn--ghost" type="button" data-copy="url">
+            <span class="btn-default">Copy link</span>
+            <span class="btn-done">Copied</span>
+          </button>
+        </div>
+        <p class="status" id="copy-status" role="status" aria-live="polite"></p>
+      </div>
+
+      <p class="micro">No tracking, no ads, no data collected. This page is a plain HTML file.</p>
+    </div>
+  </section>
+
+  <section class="section" id="how-it-works" aria-labelledby="how-it-works-title">
+    <div class="wrap">
+      <h2 id="how-it-works-title">What you get, and how to apply the code</h2>
+      <p>
+        Tesla runs the referral program per country and adjusts it every few months. In Belgium the
+        buyer's reward has taken the shape of a purchase discount, free Supercharging kilometres, or
+        credits usable in the Tesla shop and app, depending on the campaign that is running. Because
+        the amount changes, the honest answer is: check the number on Tesla's own referral page on
+        the day you order.
+      </p>
+
+      <ol class="steps">
+        <li>
+          <h3>Open the referral link first</h3>
+          <p>
+            Start your configuration from <a data-ref-link data-ref-url href="https://ts.la/tim588947" rel="nofollow noopener">https://ts.la/tim588947</a>.
+            The code is attached to the session automatically. If you configured the car already,
+            paste the code <strong><span data-ref-code>tim588947</span></strong> into the referral field on the order page instead.
+          </p>
+        </li>
+        <li>
+          <h3>Check it before you pay the order fee</h3>
+          <p>
+            The referral has to be attached at the moment you confirm the order. Look for the referral
+            line in your order summary, or open the Tesla app and check the order details.
+          </p>
+        </li>
+        <li>
+          <h3>Claim the reward after delivery</h3>
+          <p>
+            Credits and Supercharging kilometres land in your Tesla account once the car is delivered
+            and the order is finalised. A price discount is applied directly to the order total instead.
+          </p>
+        </li>
+      </ol>
+
+      <p class="note">
+        Referrals normally cover new vehicle orders. Used inventory, demo cars and some business or
+        leasing constructions can be excluded — Tesla's referral terms page lists what currently applies.
+      </p>
+    </div>
+  </section>
+
+  <section class="section section--alt" id="my-tesla" aria-labelledby="my-tesla-title">
+    <div class="wrap">
+      <h2 id="my-tesla-title">Driving a Tesla in Belgium — my own experience</h2>
+      <p>
+        I drive my Tesla daily in Belgium: commuting, groceries, and the occasional long run down to
+        France or over to the Netherlands. The short version is that after the first week the car
+        stops being a gadget and simply becomes the most boring, reliable thing in the driveway —
+        which is the highest compliment I can give a car.
+      </p>
+      <p>
+        Charging turned out to be the part I worried about most and think about least. Almost all of
+        my charging happens overnight at home, so I leave every morning with a full battery. On longer
+        trips the navigation plans the Supercharger stops itself, and the Belgian and Dutch networks
+        are dense enough that a stop is a coffee, not a detour. Winter costs range — cold weather and
+        motorway speeds eat into it noticeably — so I plan a little more margin between November and
+        March.
+      </p>
+      <p>
+        The things I appreciate most day to day are unglamorous: no fuel stops, very little
+        maintenance beyond tyres and windscreen fluid, software updates that arrive over the air, and
+        a cabin that is already warm when I get in. The things that took adjusting to: one-pedal
+        driving for the first few days, and learning to read the range estimate rather than trust it
+        blindly in winter.
+      </p>
+      <p class="note">
+        Happy to answer honest questions before you order — including the annoying parts. If you find
+        the information here useful, using my referral code costs you nothing and gets you the bonus.
+      </p>
+    </div>
+  </section>
+
+  <section class="section" id="faq" aria-labelledby="faq-title">
+    <div class="wrap">
+      <h2 id="faq-title">Frequently asked questions</h2>
+
+      <details class="faq">
+        <summary>What does the referral code give me as a buyer?</summary>
+        <p>
+          Tesla sets the reward per country and changes it regularly. Depending on the running
+          campaign it can be a discount on the purchase price, free Supercharging kilometres, or
+          credits you can spend in the Tesla app. Check Tesla's official referral page for the amount
+          that applies in Belgium on the day you order — this site cannot promise a specific figure.
+        </p>
+      </details>
+
+      <details class="faq">
+        <summary>How do I apply the referral code to my order?</summary>
+        <p>
+          Open the referral link before you configure your car, or paste the code into the referral
+          field on the order page. The code has to be in place before you confirm and pay the order
+          fee. Verify that the referral appears in your order summary or in the Tesla app.
+        </p>
+      </details>
+
+      <details class="faq">
+        <summary>Can I add a referral code after I have already ordered?</summary>
+        <p>
+          No. Tesla only counts a referral that was attached at the moment the order was placed. Once
+          the order is confirmed the referral field is locked and support cannot add a code
+          afterwards. If you have not ordered yet, use the link first.
+        </p>
+      </details>
+
+      <details class="faq">
+        <summary>Does using a referral code cost me anything?</summary>
+        <p>
+          No. You pay exactly the same price for the car. The referral program is Tesla's own
+          marketing scheme: you receive the current bonus, and I receive credits from Tesla. There is
+          no extra fee and no middleman.
+        </p>
+      </details>
+
+      <details class="faq">
+        <summary>Does the code work for used and demo Teslas?</summary>
+        <p>
+          Usually not. Referrals normally apply to new vehicle orders only, and Tesla can exclude used
+          inventory, demo cars, business leases and certain promotions. Tesla's referral terms page
+          lists the current exclusions for your country.
+        </p>
+      </details>
+    </div>
+  </section>
+
+  <section class="section section--cta" aria-labelledby="cta-title">
+    <div class="wrap">
+      <h2 id="cta-title">Ready to order?</h2>
+      <p class="lede">Use the link, or type the code <strong data-ref-code>tim588947</strong> into the referral field.</p>
+      <p class="actions actions--center">
+        <a class="btn btn--primary" data-ref-link href="https://ts.la/tim588947" rel="nofollow noopener">Open my referral link</a>
+      </p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="footer">
+  <div class="wrap">
+    <p>
+      Independent page by a private Tesla owner in Belgium. Not affiliated with, endorsed by, or
+      operated by Tesla, Inc. Referral rewards, conditions and availability are set by Tesla and can
+      change or end at any time — Tesla's own referral terms are always leading.
+    </p>
+    <p class="micro">Referral code <span data-ref-code>tim588947</span></p>
+  </div>
+</footer>
+
+</body>
+</html>
