@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 140" role="img" aria-labelledby="scTitle">
+  <title id="scTitle">Supercharger stop on a long trip</title>
+  <g fill="#1b2027" stroke="#5b6878" stroke-width="3">
+    <rect x="34" y="36" width="24" height="62" rx="7"/>
+    <rect x="70" y="36" width="24" height="62" rx="7"/>
+    <rect x="106" y="36" width="24" height="62" rx="7"/>
+  </g>
+  <g fill="#e82127">
+    <path d="M48 48l-8 14h6l-3 11 9-14h-6z"/>
+    <path d="M84 48l-8 14h6l-3 11 9-14h-6z"/>
+    <path d="M120 48l-8 14h6l-3 11 9-14h-6z"/>
+  </g>
+  <g fill="none" stroke="#5b6878" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
+    <path d="M150 62h14a6 6 0 0 1 0 12h-2"/>
+    <path d="M146 62h20v24a10 10 0 0 1-10 10h0a10 10 0 0 1-10-10z"/>
+    <path d="M144 44c4-4 0-8 4-12M156 44c4-4 0-8 4-12M168 44c4-4 0-8 4-12"/>
+  </g>
+  <path d="M18 110h164" stroke="#39424f" stroke-width="2.5" stroke-linecap="round" fill="none"/>
+</svg>
