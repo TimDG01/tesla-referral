@@ -20,6 +20,17 @@ document.addEventListener("DOMContentLoaded", function () {
     el.href = REFERRAL_URL;
   });
 
+  /* Remember a language picked in the language bar, so the automatic
+     browser-language redirect on the English entry page never overrides
+     a deliberate choice. */
+  document.querySelectorAll(".langbar a[hreflang]").forEach(function (link) {
+    link.addEventListener("click", function () {
+      try {
+        window.localStorage.setItem("preferred-lang", link.getAttribute("hreflang"));
+      } catch (e) { /* private mode: the choice simply is not remembered */ }
+    });
+  });
+
   var button = document.querySelector("[data-copy]");
   var status = document.getElementById("copy-status");
   if (!button) return;

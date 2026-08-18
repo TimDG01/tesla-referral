@@ -10,7 +10,7 @@ No framework, no build step, no external requests — plain HTML, CSS and one sm
 | `index.html` | English page (also the `x-default` for search engines) |
 | `nl.html`, `fr.html`, `de.html` | Dutch, French and German versions |
 | `style.css` | Shared dark, mobile-first stylesheet |
-| `referral.js` | Referral code/link constants + copy-to-clipboard |
+| `referral.js` | Referral code/link constants, copy-to-clipboard, remembers the language choice |
 | `img/*.svg` | Illustrations (hand-written SVG, a few hundred bytes each) |
 | `img/og.png` | Social sharing preview, generated from `tools/og-image.html` |
 | `sitemap.xml`, `robots.txt` | Indexing |
@@ -32,6 +32,29 @@ because search engines and social networks read them as static text:
 3. `img/og.png` — regenerate it from `tools/og-image.html` (command is in that file).
 
 A search-and-replace of the old code across the four HTML files covers 1 and 2.
+
+## Which language a visitor gets
+
+English is the default: `index.html` is what everyone lands on, and it is the
+`x-default` for search engines. A small inline script in its `<head>` — and only
+there — sends visitors on to `nl.html`, `fr.html` or `de.html` when their browser
+asks for Dutch, French or German. Any other browser language stays on English.
+
+The redirect never overrules a person:
+
+- Picking a language in the language bar stores that choice (`preferred-lang` in
+  `localStorage`), and a stored choice always wins over the browser language.
+- `?lang=en` on the entry page forces English and remembers it; `?lang=nl|fr|de`
+  forces that version. Handy when you want to share a link in a specific language.
+- With JavaScript off, or in a browser that blocks storage, nothing redirects and
+  everyone sees English with the language bar on top.
+
+The three translated pages carry no redirect at all, so a direct link to
+`nl.html` always opens Dutch, whatever the browser says.
+
+To switch the automatic behaviour off entirely, delete that inline `<script>`
+block from `index.html`. English then stays put for everyone, and the language
+bar keeps working.
 
 ## Replacing the illustrations with your own photos
 

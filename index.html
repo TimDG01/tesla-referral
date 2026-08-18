@@ -43,6 +43,40 @@
 <link rel="stylesheet" href="style.css">
 <script src="referral.js" defer></script>
 
+<script>
+/* English is the default. On the entry page only, send visitors whose
+   browser asks for Dutch, French or German to that version instead.
+   A choice made in the language bar is remembered and always wins,
+   so nobody gets bounced away from the page they picked. */
+(function () {
+  var PAGES = { en: "./", nl: "nl.html", fr: "fr.html", de: "de.html" };
+  var store;
+  try { store = window.localStorage; } catch (e) { store = null; }
+
+  var asked = (location.search.match(/[?&]lang=([a-zA-Z]{2})/) || [])[1];
+  if (asked) asked = asked.toLowerCase();
+  if (asked && PAGES[asked]) {
+    if (store) { try { store.setItem("preferred-lang", asked); } catch (e) {} }
+    if (asked === "en") return;
+    location.replace(PAGES[asked]);
+    return;
+  }
+
+  var wanted = null;
+  if (store) { try { wanted = store.getItem("preferred-lang"); } catch (e) {} }
+  if (!wanted) {
+    var list = navigator.languages || [navigator.language || ""];
+    for (var i = 0; i < list.length; i++) {
+      var code = String(list[i]).slice(0, 2).toLowerCase();
+      if (PAGES[code]) { wanted = code; break; }
+    }
+  }
+  if (wanted && wanted !== "en" && PAGES[wanted]) location.replace(PAGES[wanted]);
+})();
+</script>
+
+
+
 <script type="application/ld+json">
 {
   "@context": "https://schema.org",
