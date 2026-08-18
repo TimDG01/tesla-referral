@@ -132,6 +132,7 @@ a:hover { color: #ff9296; }
   white-space: nowrap;
   text-underline-offset: 3px;
 }
+.out::after { content: " \2197"; text-decoration: none; }
 .code-link { color: #8b98a8; text-underline-offset: 3px; }
 .code-link:hover { color: #ff8a8e; }
 

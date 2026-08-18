@@ -85,6 +85,36 @@ root domain, and because nothing on the site needs blocking anyway. Submit
 `sitemap.xml` directly in Search Console instead of relying on the `Sitemap:`
 line in it.
 
+### Getting indexed
+
+Everything a search engine reads is already in the files: unique titles and
+descriptions per language, a reciprocal hreflang cluster with `x-default`,
+canonical tags, `FAQPage` + `WebPage` structured data with an author and a
+`dateModified`, a sitemap, alt text on every image and a page that needs no
+external request to render. What no markup can do is make Google aware the site
+exists, or make it outrank established pages. That part is manual:
+
+1. **Search Console** (https://search.google.com/search-console) - add the
+   property `https://timdg01.github.io/tesla-referral/` as a URL prefix. Verify
+   with the HTML-tag method: Google gives a `<meta name="google-site-verification"
+   content="...">` line, which goes in the `<head>` of `index.html`.
+2. **Submit the sitemap** under Sitemaps: `sitemap.xml`.
+3. **Request indexing** for all four URLs via URL Inspection. Without this a new
+   site can sit unnoticed for weeks.
+4. **Bing Webmaster Tools** does the same job for Bing, and takes one import
+   from Search Console.
+5. **Links pointing at the page** are what actually moves a competitive term:
+   an EV forum signature, a Reddit or Tweakers post, a local Tesla owners group.
+   Ten relevant links beat any amount of meta-tag tuning.
+6. **Keep the date honest.** `DATE_ISO` / the visible "last updated" line and
+   `<lastmod>` in the sitemap should move when the content really changes.
+
+Realistic expectation: the generic term "tesla referral code" is dominated by
+large aggregator sites and is not winnable with a one-page site. What this site
+can realistically rank for are the long-tail queries it answers precisely -
+things like "tesla referral code belgie", "code parrainage tesla belgique",
+"referral code toevoegen na bestelling".
+
 After publishing, submit the sitemap in Google Search Console. Metadata alone does
 not get a page ranked for a competitive term like "Tesla referral code" — indexing
 plus links pointing at the page do the actual work.
