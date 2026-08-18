@@ -121,7 +121,19 @@ a:hover { color: #ff9296; }
   color: #fff;
   word-break: break-all;
 }
-.code-value--link { color: #ff8a8e; }
+.code-value--link { color: #ff8a8e; text-decoration: underline; text-underline-offset: 4px; }
+.code-value--link:hover { color: #ffb3b6; }
+
+/* the referral code where it appears inside a sentence */
+.code-inline {
+  font-family: var(--mono);
+  font-weight: 650;
+  color: #ff8a8e;
+  white-space: nowrap;
+  text-underline-offset: 3px;
+}
+.code-link { color: #8b98a8; text-underline-offset: 3px; }
+.code-link:hover { color: #ff8a8e; }
 
 /* ---------- buttons ---------- */
 
