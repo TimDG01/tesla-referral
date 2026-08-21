@@ -1,15 +1,17 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 140" role="img" aria-labelledby="homeTitle">
-  <title id="homeTitle">Charging at home overnight</title>
+  <title id="homeTitle">Charging at home on solar power</title>
   <g fill="none" stroke="#5b6878" stroke-width="3" stroke-linecap="round" stroke-linejoin="round">
     <path d="M46 70 100 32l54 38"/>
     <path d="M58 66v42h84V66"/>
   </g>
+  <g fill="none" stroke="#8b98a8" stroke-width="2" stroke-linejoin="round">
+    <path d="M110 44 136 62 128 70 102 52z"/>
+    <path d="M118.7 50.0 110.7 58.0M127.3 56.0 119.3 64.0"/>
+  </g>
   <path d="M104 74l-16 22h12l-4 18 18-24h-13z" fill="#e82127"/>
-  <g fill="none" stroke="#39424f" stroke-width="2.5" stroke-linecap="round">
-    <path d="M30 108h140"/>
+  <g stroke="#e0a92e" stroke-width="2.5" stroke-linecap="round">
+    <circle cx="40" cy="30" r="8" fill="none"/>
+    <path d="M40 14v-5M40 51v-5M24 30h-5M61 30h-5M28.7 18.7l-3.5-3.5M54.8 44.8l-3.5-3.5M28.7 41.3l-3.5 3.5M54.8 15.2l-3.5 3.5"/>
   </g>
-  <g fill="#5b6878" opacity=".75">
-    <circle cx="164" cy="34" r="3"/><circle cx="42" cy="30" r="2.2"/><circle cx="150" cy="18" r="2.2"/>
-  </g>
-  <path d="M32 24a10 10 0 1 0 10 12 8 8 0 0 1-10-12z" fill="#8b98a8" opacity=".8"/>
+  <path d="M30 108h140" fill="none" stroke="#39424f" stroke-width="2.5" stroke-linecap="round"/>
 </svg>
