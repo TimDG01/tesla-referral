@@ -9,7 +9,7 @@ No framework, no build step, no external requests — plain HTML, CSS and one sm
 | --- | --- |
 | `index.html` | English page (also the `x-default` for search engines) |
 | `nl.html`, `fr.html`, `de.html` | Dutch, French and German versions |
-| `style.css` | Shared dark, mobile-first stylesheet |
+| `style.css` | Shared mobile-first stylesheet; light by default, dark when the device is in dark mode |
 | `referral.js` | Referral code/link constants, copy-to-clipboard, remembers the language choice |
 | `img/*.svg` | Illustrations (hand-written SVG, a few hundred bytes each) |
 | `img/og.png` | Social sharing preview, generated from `tools/og-image.html` |
