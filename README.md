@@ -12,6 +12,7 @@ No framework, no build step, no external requests — plain HTML, CSS and one sm
 | `style.css` | Shared mobile-first stylesheet; light by default, dark when the device is in dark mode |
 | `referral.js` | Referral code/link constants, copy-to-clipboard, remembers the language choice |
 | `img/*.svg` | Illustrations (hand-written SVG, a few hundred bytes each) |
+| `img/my-model-y-*.webp`, `img/my-model-y-800.jpg` | Photo of my own Model Y (800 and 1400 px WebP, 800 px JPEG fallback; no EXIF/location data) |
 | `img/og.png` | Social sharing preview, generated from `tools/og-image.html` |
 | `sitemap.xml`, `robots.txt` | Indexing |
 
