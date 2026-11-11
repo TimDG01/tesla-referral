@@ -11,7 +11,7 @@ No framework, no build step, no external requests — plain HTML, CSS and one sm
 | `nl.html`, `fr.html`, `de.html` | Dutch, French and German versions |
 | `style.css` | Shared mobile-first stylesheet; light by default, dark when the device is in dark mode |
 | `referral.js` | Referral code/link constants, copy-to-clipboard, remembers the language choice |
-| `img/*.svg` | Illustrations (hand-written SVG, a few hundred bytes each) |
+| `img/hero-car.svg` | Only used by `tools/og-image.html` to build the sharing preview |
 | `img/my-model-y-*.webp`, `img/my-model-y-800.jpg` | Photo of my own Model Y (800 and 1400 px WebP, 800 px JPEG fallback; no EXIF/location data) |
 | `img/og.png` | Social sharing preview, generated from `tools/og-image.html` |
 | `sitemap.xml`, `robots.txt` | Indexing |
@@ -56,19 +56,6 @@ The three translated pages carry no redirect at all, so a direct link to
 To switch the automatic behaviour off entirely, delete that inline `<script>`
 block from `index.html`. English then stays put for everyone, and the language
 bar keeps working.
-
-## Replacing the illustrations with your own photos
-
-The three cards under "what owning one actually looks like" use local SVG files.
-To use real photos instead, drop them in `img/` and change the `src` in each
-`<li class="feature">` block (all four language files):
-
-```html
-<img src="img/my-photo.jpg" alt="..." width="200" height="140" loading="lazy" decoding="async">
-```
-
-Keep them local — the site makes no external requests, which is why it loads instantly.
-Resize to roughly 800px wide before committing so the page stays light.
 
 ## Publishing
 

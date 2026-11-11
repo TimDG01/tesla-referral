@@ -342,51 +342,45 @@ a:hover { color: var(--accent-text-hover); }
   background: var(--accent-soft);
 }
 
-/* ---------- illustrations ---------- */
+/* ---------- hero photo ---------- */
 
-.hero-art {
+.hero-photo { margin: 1.75rem 0 0; }
+.hero-photo img {
   display: block;
   width: 100%;
-  max-width: 27rem;
   height: auto;
-  margin: 1.75rem 0 0;
+  aspect-ratio: 3 / 2;
+  object-fit: cover;
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  background: var(--card);
 }
+.hero-photo figcaption { margin-top: 0.55rem; font-size: 0.85rem; color: var(--faint); }
 
-.features {
+.card .micro { margin-top: 0.2rem; }
+
+/* ---------- a few numbers from my own use ---------- */
+
+.facts {
   list-style: none;
   margin: 1.75rem 0 0;
   padding: 0;
   display: grid;
-  gap: 1rem;
+  gap: 0.75rem;
 }
-.feature {
+.facts li {
   background: var(--card);
   border: 1px solid var(--line);
   border-radius: var(--radius);
-  padding: 1.1rem 1.25rem 1.35rem;
+  padding: 1rem 1.25rem;
 }
-.feature img {
+.facts strong {
   display: block;
-  width: 100%;
-  max-width: 10rem;
-  height: auto;
-  margin: 0 auto 0.6rem;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: -0.02em;
 }
-.feature h3 { margin-bottom: 0.35rem; }
-.feature p { margin: 0; color: var(--muted); font-size: 0.95rem; }
-
-/* ---------- photo ---------- */
-
-.photo { margin: 0 0 1.5rem; }
-.photo img {
-  display: block;
-  width: 100%;
-  height: auto;
-  border-radius: var(--radius);
-  border: 1px solid var(--line);
-  background: var(--card);
-}
-.photo figcaption { margin-top: 0.55rem; font-size: 0.85rem; color: var(--faint); }
+.facts span { color: var(--muted); font-size: 0.95rem; }
 
 /* ---------- larger screens ---------- */
 
@@ -402,9 +396,7 @@ a:hover { color: var(--accent-text-hover); }
   .code-label { flex: 0 0 8.5rem; }
   .code-value { font-size: 1.15rem; }
   .btn { flex: 0 1 auto; }
-  .hero-art { max-width: 33rem; }
-  .features { grid-template-columns: repeat(3, 1fr); }
-  .feature img { max-width: 8.5rem; }
+  .facts { grid-template-columns: repeat(3, 1fr); }
 }
 
 /* ---------- desktop ---------- */
@@ -416,7 +408,7 @@ a:hover { color: var(--accent-text-hover); }
   h1 { font-size: 3.2rem; }
   h2 { font-size: 2.1rem; }
 
-  /* hero: text and referral card on the left, the illustration on the right */
+  /* hero: text and referral card on the left, the photo on the right */
   .hero { padding: 5.5rem 0 5rem; }
   .hero .wrap {
     display: grid;
@@ -435,7 +427,8 @@ a:hover { color: var(--accent-text-hover); }
   .hero .lede { grid-area: lede; }
   .hero .card { grid-area: card; margin-top: 1rem; }
   .hero .micro { grid-area: micro; }
-  .hero-art { grid-area: art; align-self: center; max-width: none; margin: 0; }
+  .hero-photo { grid-area: art; align-self: center; margin: 0; }
+  .hero-photo img { aspect-ratio: 4 / 3; }
 
   /* keep running text at a readable line length on the wider layout */
   .section .wrap > p,
@@ -451,10 +444,6 @@ a:hover { color: var(--accent-text-hover); }
   }
   .steps li { margin-bottom: 0; }
 
-  .features { gap: 1.5rem; }
-  .feature { padding: 1.5rem 1.6rem 1.75rem; }
-  .feature img { max-width: 11rem; }
-
   #faq .wrap {
     display: grid;
     grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -463,7 +452,7 @@ a:hover { color: var(--accent-text-hover); }
   }
   #faq h2 { grid-column: 1 / -1; }
 
-  /* own-experience section: text on the left, the photo beside it */
+  /* own-experience section: text on the left, the numbers beside it */
   #my-tesla .wrap {
     display: grid;
     grid-template-columns: minmax(0, 1fr) minmax(0, 30rem);
@@ -472,7 +461,7 @@ a:hover { color: var(--accent-text-hover); }
   }
   #my-tesla .wrap > * { grid-column: 1; }
   #my-tesla .wrap > h2 { grid-column: 1 / -1; }
-  #my-tesla .photo { grid-column: 2; grid-row: 2 / span 4; margin: 0.35rem 0 0; }
+  #my-tesla .facts { grid-column: 2; grid-row: 2 / span 4; grid-template-columns: 1fr; margin: 0.35rem 0 0; }
 }
 
 @media (prefers-reduced-motion: reduce) {
